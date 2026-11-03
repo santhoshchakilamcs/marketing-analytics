@@ -1,4 +1,4 @@
-# Marketing Analytics (Personal Project)
+# Marketing Analytics
 
 ## About
 
