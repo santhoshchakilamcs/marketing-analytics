@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marketing Analytics (synthetic demo)</title>
+<style>body{font-family:system-ui,sans-serif;max-width:900px;margin:20px auto;padding:0 16px}.warn{background:#fff3cd;padding:10px;border:1px solid #e6c200}</style>
+</head><body>
+<h1>Marketing Analytics</h1>
+<p class="warn"><b>Synthetic data only, with known ground truth. No Wealthfront data, no real campaign data.</b> Personal project: media mix modeling with adstock and saturation, geo incrementality experiment, position-based attribution, and customer segmentation.</p>
+<h2>All metrics</h2><pre id="metrics">loading…</pre>
+<h2>Bring your own data</h2>
+<p>Upload a weekly CSV with spend_TV, spend_Search, spend_Social, spend_Email, spend_Display, and conversions. It runs the same MMM on your data in memory. Nothing is stored permanently.</p>
+<input type="file" id="csv"><button onclick="upload()">Upload</button><pre id="up"></pre>
+<script>
+async function j(u,o){const r=await fetch(u,o);return r.json()}
+j('/api/metrics').then(d=>document.getElementById('metrics').textContent=JSON.stringify(d,null,2));
+async function upload(){const f=document.getElementById('csv').files[0];if(!f)return;const fd=new FormData();fd.append('file',f);document.getElementById('up').textContent=JSON.stringify(await j('/api/upload',{method:'POST',body:fd}),null,2)}
+</script></body></html>

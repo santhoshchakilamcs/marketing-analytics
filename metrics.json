@@ -1,0 +1,91 @@
+{
+  "dataset": "Synthetic, known ground truth (no real campaign data)",
+  "n_weeks": 104,
+  "channels": [
+    "TV",
+    "Search",
+    "Social",
+    "Email",
+    "Display"
+  ],
+  "mmm": {
+    "r2": 0.7146,
+    "coefficients": {
+      "TV": 100.4727,
+      "Search": 127.3168,
+      "Social": 42.9813,
+      "Email": 116.2685,
+      "Display": 66.9948
+    },
+    "contribution_share": {
+      "TV": 0.2208,
+      "Search": 0.2794,
+      "Social": 0.0935,
+      "Email": 0.26,
+      "Display": 0.1464
+    },
+    "roas_proxy": {
+      "TV": 0.019,
+      "Search": 0.0243,
+      "Social": 0.0084,
+      "Email": 0.0211,
+      "Display": 0.0129
+    }
+  },
+  "incrementality_geo_experiment": {
+    "true_lift": 0.15,
+    "estimated_lift": 0.1491,
+    "treated_geos": 50,
+    "control_geos": 50,
+    "pre_weeks": 20,
+    "post_weeks": 20,
+    "did_conversions_per_geo": 150.26
+  },
+  "attribution": {
+    "n_journeys": 5000,
+    "conversion_rate": 0.2336,
+    "position_based_share": {
+      "TV": 0.1964,
+      "Search": 0.2445,
+      "Social": 0.1702,
+      "Email": 0.2202,
+      "Display": 0.1686
+    }
+  },
+  "segmentation": {
+    "n_customers": 2000,
+    "segments": [
+      {
+        "segment": 0,
+        "size": 485,
+        "mean_recency_days": 254.1,
+        "mean_frequency": 36.8,
+        "mean_money": 1468.94
+      },
+      {
+        "segment": 1,
+        "size": 509,
+        "mean_recency_days": 115.3,
+        "mean_frequency": 14.0,
+        "mean_money": 1326.75
+      },
+      {
+        "segment": 2,
+        "size": 506,
+        "mean_recency_days": 98.3,
+        "mean_frequency": 34.0,
+        "mean_money": 3512.29
+      },
+      {
+        "segment": 3,
+        "size": 500,
+        "mean_recency_days": 266.6,
+        "mean_frequency": 16.1,
+        "mean_money": 3554.78
+      }
+    ]
+  },
+  "total_spend": 9917075.24,
+  "total_conversions": 230276.85,
+  "total_revenue": 27633222.54
+}
